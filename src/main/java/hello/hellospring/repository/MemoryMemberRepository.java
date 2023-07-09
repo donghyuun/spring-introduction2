@@ -4,8 +4,10 @@ import hello.hellospring.domain.Member;
 
 import java.util.*;
 
+// 구현 클래스
 public class MemoryMemberRepository implements MemberRepository {
-    private static Map<Long, Member> store = new HashMap<>();// db 역할
+    // static 자료형은 해당 클래스의 모든 객체가 공유하므로 한개만 존재함!!!!!!
+    private static Map<Long, Member> store = new HashMap<>();// ****db 역할****
     private static long sequence = 0L;//0,1,2.. key값을 설정해줌
 
     @Override

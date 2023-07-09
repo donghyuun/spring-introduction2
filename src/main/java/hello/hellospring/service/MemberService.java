@@ -9,14 +9,18 @@ import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository){//외부에서 넣어주도록 설정함
+        this.memberRepository = memberRepository;
+    }
 
     /* 회원 가입 */
     public Long join(Member member){
         //같은 이름이 있는 중복 회원X
         validateDuplicateMember(member);//중복 회원 검증
 
-        memberRepository.save(member);
+        memberRepository.save(member);//db(static)에 저장됨
         return member.getId();
     }
 
