@@ -1,9 +1,11 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 // 구현 클래스
 public class MemoryMemberRepository implements MemberRepository {
     // static 자료형은 해당 클래스의 모든 객체가 공유하므로 한개만 존재함!!!!!!
