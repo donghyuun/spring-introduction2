@@ -9,12 +9,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service//스프링이 올라올때 MemberService 를 스프링 컨테이너에 스프링 빈으로 등록해줌
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    @Autowired//MemberService를 스프링 빈에 등록할때 스프링이 스프링 빈에서 memberRepository 객체를 넣어줌(DI)
     public MemberService(MemberRepository memberRepository){//외부에서 넣어주도록 설정함
         this.memberRepository = memberRepository;
     }
