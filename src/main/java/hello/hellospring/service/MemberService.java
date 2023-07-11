@@ -13,6 +13,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    //인터페이스 변수에 해당 인터페이스를 상속하는 구현객체를 대입할 수 있다. 이렇게 하면 인터페이스 변수로 인터페이스의 추상 메서드를 호출할 수 있게된다.
     public MemberService(MemberRepository memberRepository){//외부에서 넣어주도록 설정함
         this.memberRepository = memberRepository;
     }
